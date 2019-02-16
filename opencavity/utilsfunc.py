@@ -1,6 +1,5 @@
 '''
 Created on 11 mars 2014
-
 @author: Mohamed seghilani
 '''
 import opencavity
@@ -101,7 +100,7 @@ class UtilsFunc(object):
      
         A = np.zeros(m)   
         x = np.zeros(m)   
-        nRoots = (m + 1)/2          # Number of non-neg. roots
+        nRoots = int((m + 1)/2)          # Number of non-neg. roots
         for i in range(nRoots):
             t = math.cos(math.pi*(i + 0.75)/(m + 0.5))  # Approx. root
             for j in range(30): 
@@ -131,9 +130,9 @@ class UtilsFunc(object):
     def toc(self):
         import time
         if 'startTime_for_tictoc' in globals():
-            print "Elapsed time is " + str(time.time() - startTime_for_tictoc) + " seconds."
+            print("Elapsed time is " + str(time.time() - startTime_for_tictoc) + " seconds.")
         else:
-            print "Toc: start time not set"
+            print("Toc: start time not set")
 
 
 if __name__=='__main__':
